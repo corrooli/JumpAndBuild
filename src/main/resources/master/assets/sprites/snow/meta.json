@@ -1,0 +1,80 @@
+{
+    "bushL": {
+        "name": "Bush Left",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": false
+        },
+        "sprites": {
+            "idle": [
+                "blocks/bush_l.png"
+            ]
+        }
+    },
+    "bushR": {
+        "name": "Bush Right",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": false
+        },
+        "sprites": {
+            "idle": [
+                "blocks/bush_r.png"
+            ]
+        }
+    },
+    "dirtLeft": {
+        "name": "Dirt Left",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_left.png"
+            ]
+        }
+    },
+    "dirtRight": {
+        "name": "Dirt Right",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_right.png"
+            ]
+        }
+    },
+    "dirtSigle": {
+        "name": "Dirt Single",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_single.png"
+            ]
+        }
+    },
+    "dirtTop": {
+        "name": "Dirt Top",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_top.png"
+            ]
+        }
+    }
+}

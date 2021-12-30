@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox fx:id="root" maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0"
+      prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.teamretro.ui.editor.controller.EditorController">
+    <BorderPane prefHeight="27.0" prefWidth="1430.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;">
+        <left>
+            <HBox prefHeight="29.0" prefWidth="1004.0" BorderPane.alignment="CENTER">
+                <Button fx:id="newGamePackButton" maxWidth="150.0" minWidth="150.0" mnemonicParsing="false"
+                        onAction="#newGamePackAction" prefWidth="150.0"
+                        style="-fx-background-radius: 15; -fx-background-color: #DDDDDD;" text="New">
+                    <HBox.margin>
+                        <Insets right="15.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="loadGamePackButton" layoutX="10.0" layoutY="10.0" maxWidth="150.0" minWidth="150.0"
+                        mnemonicParsing="false" onAction="#loadGamePackAction" prefWidth="150.0"
+                        style="-fx-background-radius: 15; -fx-background-color: #DDDDDD;" text="Load">
+                    <HBox.margin>
+                        <Insets right="15.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="saveGamePackButton" layoutX="165.0" layoutY="10.0" maxWidth="150.0" minWidth="150.0"
+                        mnemonicParsing="false" onAction="#saveGamePackAction" prefWidth="150.0"
+                        style="-fx-background-radius: 15; -fx-background-color: #DDDDDD;" text="Save">
+                    <HBox.margin>
+                        <Insets right="190.0"/>
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <MenuBar fx:id="levelSelectionMenuBar" prefHeight="29.0" prefWidth="130.0"
+                         style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <Menu fx:id="levelSelectionMenu" mnemonicParsing="false"
+                          style="-fx-background-radius: 15; -fx-background-color: #DDDDDD;"
+                          text="Level Selection">
+                        <MenuItem fx:id="levelSelectionAdd" mnemonicParsing="false"
+                                  onAction="#levelSelectionAddAction" text="Add..."/>
+                        <MenuItem fx:id="levelSelectionDelete" mnemonicParsing="false"
+                                  onAction="#levelSelectionDeleteAction" text="Delete..."/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                    </Menu>
+                </MenuBar>
+                <MenuBar fx:id="backgroundMenuBar" layoutX="680.0" layoutY="10.0" prefHeight="29.0"
+                         prefWidth="130.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 15;">
+                    <Menu fx:id="backgroundMenu" mnemonicParsing="false"
+                          style="-fx-background-radius: 15; -fx-background-color: #DDDDDD;" text="Background"/>
+                </MenuBar>
+            </HBox>
+        </left>
+        <right>
+            <Button fx:id="quitMenu" maxWidth="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#quitAction"
+                    prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: FF5858;" text="Quit"
+                    textFill="WHITE" BorderPane.alignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="13.0"/>
+                </font>
+            </Button>
+        </right>
+        <VBox.margin>
+            <Insets left="30.0" right="30.0" top="20.0"/>
+        </VBox.margin>
+    </BorderPane>
+    <BorderPane prefHeight="692.0" prefWidth="1280.0">
+        <center>
+            <GridPane maxHeight="670.0" maxWidth="1280.0" minHeight="670.0" minWidth="1280.0" prefHeight="670.0"
+                      prefWidth="1280.0" BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.0" minWidth="10.0" prefWidth="649.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="730.0" minWidth="0.0" prefWidth="33.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="595.0" minWidth="10.0" prefWidth="536.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="629.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="629.0" minHeight="10.0" prefHeight="532.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <padding>
+                    <Insets left="30.0" right="30.0" top="15.0"/>
+                </padding>
+                <BorderPane fx:id="canvasPane" prefHeight="200.0" prefWidth="200.0"
+                            style="-fx-border-color: black; -fx-border-width: 1;" GridPane.rowIndex="1">
+                    <center>
+                        <Canvas fx:id="canvas" height="512.0" width="640.0" BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <TabPane fx:id="entityMenu" prefHeight="200.0" prefWidth="200.0"
+                         style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white;"
+                         tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <BorderPane fx:id="navigationPane" prefHeight="200.0" prefWidth="200.0"
+                            style="-fx-background-color: #EEEEEE; -fx-background-radius: 30;" GridPane.rowIndex="2">
+                    <left>
+                        <Button fx:id="navigationLeftButton" mnemonicParsing="false" onAction="#navigateLeftAction"
+                                style="-fx-background-radius: 15; -fx-background-color: white;" text="←"
+                                BorderPane.alignment="CENTER"/>
+                    </left>
+                    <right>
+                        <Button fx:id="navigationRightButton" mnemonicParsing="false"
+                                onAction="#navigateRightAction"
+                                style="-fx-background-radius: 15; -fx-background-color: white;" text="→"
+                                BorderPane.alignment="CENTER"/>
+                    </right>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" top="20.0"/>
+                    </GridPane.margin>
+                    <padding>
+                        <Insets left="15.0" right="15.0"/>
+                    </padding>
+                    <center>
+                        <Button fx:id="moveToPlayerButton" mnemonicParsing="false" onAction="#moveToPlayerAction"
+                                style="-fx-background-radius: 15; -fx-background-color: white;"
+                                text="Navigate to Player" BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="controlsPane" prefHeight="200.0" prefWidth="200.0"
+                            style="-fx-background-radius: 30; -fx-background-color: #EEEEEE; -fx-border-width: 2;"
+                            GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <right>
+                        <Button fx:id="playButton" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false"
+                                onAction="#playAction" prefWidth="80.0"
+                                style="-fx-background-color: #55ADFF; -fx-background-radius: 15;" text="Play!"
+                                textFill="WHITE" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Button>
+                    </right>
+                    <left>
+                        <Button fx:id="clearLevelButton" mnemonicParsing="false" onAction="#clearLevelAction"
+                                style="-fx-background-color: FF5858; -fx-background-radius: 15;" text="Clear Level"
+                                textFill="WHITE" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Button>
+                    </left>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" top="20.0"/>
+                    </GridPane.margin>
+                    <padding>
+                        <Insets left="15.0" right="15.0"/>
+                    </padding>
+                    <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <left>
+                                <Button fx:id="undoButton" mnemonicParsing="false" onAction="#undoAction"
+                                        style="-fx-background-color: AAAAAA; -fx-background-radius: 15;"
+                                        text="↻ Undo" textFill="WHITE" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                    <BorderPane.margin>
+                                        <Insets/>
+                                    </BorderPane.margin>
+                                </Button>
+                            </left>
+                            <right>
+                                <Button fx:id="redoButton" mnemonicParsing="false" onAction="#redoAction"
+                                        style="-fx-background-color: AAAAAA; -fx-background-radius: 15;"
+                                        text="↺ Redo" textFill="WHITE" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Button>
+                            </right>
+                            <BorderPane.margin>
+                                <Insets left="100.0" right="100.0"/>
+                            </BorderPane.margin>
+                        </BorderPane>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="levelViewLabel" prefHeight="200.0" prefWidth="200.0">
+                    <left>
+                        <Label text="Level View" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="Arial" size="20.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="15.0"/>
+                            </padding>
+                        </Label>
+                    </left>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                    <left>
+                        <Label fx:id="entityTabLabel" text="Level Elements" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="Arial" size="20.0"/>
+                            </font>
+                            <BorderPane.margin>
+                                <Insets bottom="15.0"/>
+                            </BorderPane.margin>
+                        </Label>
+                    </left>
+                </BorderPane>
+            </GridPane>
+        </center>
+    </BorderPane>
+</VBox>

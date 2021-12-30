@@ -1,0 +1,76 @@
+{
+    "chad": {
+        "name": "Chad",
+        "properties": {
+            "entityType": "enemy",
+            "behavior": "genericEnemy",
+            "solid": true
+        },
+        "sprites": {
+            "walk": [
+                "types/chad_1.png",
+                "types/chad_2.png",
+                "types/chad_3.png"
+            ],
+            "jump": [],
+            "idle": [
+                "types/chad_1.png"
+            ]
+        }
+    },
+    "nugget": {
+        "name": "Nugget",
+        "properties": {
+            "entityType": "enemy",
+            "behavior": "genericEnemy",
+            "solid": true
+        },
+        "sprites": {
+            "walk": [
+                "types/nugget_1.png",
+                "types/nugget_2.png"
+            ],
+            "jump": [],
+            "idle": [
+                "types/nugget_1.png"
+            ]
+        }
+    },
+    "bananaguy": {
+        "name": "Banana Guy",
+        "properties": {
+            "entityType": "enemy",
+            "behavior": "genericEnemy",
+            "solid": true
+        },
+        "sprites": {
+            "walk": [
+                "types/bananaguy_1.png",
+                "types/bananaguy_2.png"
+            ],
+            "jump": [],
+            "idle": [
+                "types/bananaguy_1.png"
+            ]
+        }
+    },
+    "sonichu": {
+        "name": "Sonichu",
+        "properties": {
+            "entityType": "enemy",
+            "behavior": "genericEnemy",
+            "solid": true
+        },
+        "sprites": {
+            "walk": [
+                "types/sonichu_1.png",
+                "types/sonichu_2.png",
+                "types/sonichu_3.png"
+            ],
+            "jump": [],
+            "idle": [
+                "types/sonichu_1.png"
+            ]
+        }
+    }
+}

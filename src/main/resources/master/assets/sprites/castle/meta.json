@@ -1,0 +1,145 @@
+{
+    "brick1": {
+        "name": "Brick 1",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/brick_1.png"
+            ]
+        }
+    },
+    "brick2": {
+        "name": "Brick 2",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/brick_2.png"
+            ]
+        }
+    },
+    "block1": {
+        "name": "Block 1",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/block_1.png"
+            ]
+        }
+    },
+    "block2": {
+        "name": "Block 2",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/block_2.png"
+            ]
+        }
+    },
+    "spikes": {
+        "name": "Spikes",
+        "properties": {
+            "entityType": "block",
+            "behavior": "damage",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/spikes.png"
+            ]
+        }
+    },
+    "dirtBottom": {
+        "name": "Dirt Bottom",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_bottom.png"
+            ]
+        }
+    },
+    "dirtLeft": {
+        "name": "Dirt Left",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_left.png"
+            ]
+        }
+    },
+    "dirtRight": {
+        "name": "Dirt Right",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_right.png"
+            ]
+        }
+    },
+    "dirtSigle": {
+        "name": "Dirt Single",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_single.png"
+            ]
+        }
+    },
+    "dirtTop": {
+        "name": "Dirt Top",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/dirt_top.png"
+            ]
+        }
+    },
+    "castleBackground": {
+        "name": "Castle Background",
+        "properties": {
+            "entityType": "background",
+            "behavior": "static",
+            "solid": false 
+        },
+        "sprites": {
+            "idle": [
+                "background/castle.png"
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "goalPost": {
+        "name": "Goalpost",
+        "properties": {
+            "entityType": "block",
+            "behavior": "win",
+            "solid": false
+        },
+        "sprites": {
+            "idle": [
+                "blocks/goalpost.png"
+            ]
+        }
+    },
+    "itemBlock": {
+        "name": "Item Block",
+        "properties": {
+            "entityType": "block",
+            "behavior": "static",
+            "solid": true
+        },
+        "sprites": {
+            "idle": [
+                "blocks/item_block.png",
+                "blocks/item_block_empty.png"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:id="root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.teamretro.ui.game.controller.GameController">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="Game">
+            <MenuItem mnemonicParsing="false" onAction="#openGamePackAction"
+                      text="Open Game Pack..."/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Restart Level" onAction="#restartLevelAction"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="About" onAction="#aboutMenuAction"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#quitGameAction" text="Quit"/>
+        </Menu>
+    </MenuBar>
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+        <center>
+            <Canvas id="canvas" fx:id="canvas" height="512.0" width="640.0" BorderPane.alignment="CENTER"/>
+        </center>
+        <top>
+            <Label fx:id="scoreBar" prefHeight="17.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF;"
+                   BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets/>
+                </BorderPane.margin>
+                <padding>
+                    <Insets bottom="5.0" left="19.0" right="19.0" top="5.0"/>
+                </padding>
+            </Label>
+        </top>
+    </BorderPane>
+</VBox>

@@ -1,0 +1,14 @@
+{
+    "name": "Jump and Build",
+    "levels": [
+        "startLevel"
+    ],
+    "spritePacks": [
+        "castle",
+        "day",
+        "enemies",
+        "levelelements",
+        "protagonist",
+        "snow"
+    ]
+}

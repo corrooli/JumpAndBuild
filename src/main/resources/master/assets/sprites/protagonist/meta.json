@@ -1,0 +1,23 @@
+{
+    "protagonist": {
+        "name": "IT Student",
+        "properties": {
+            "entityType": "player",
+            "behavior": "playable",
+            "solid": true
+        },
+        "sprites": {
+            "walk": [
+                "student/protagonist_walk_1.png",
+                "student/protagonist_walk_2.png",
+                "student/protagonist_walk_3.png"
+            ],
+            "jump": [
+                "student/protagonist_jump.png"
+            ],
+            "idle": [
+                "student/protagonist_walk_1.png"
+            ]
+        }
+    }
+}
